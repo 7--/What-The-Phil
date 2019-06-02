@@ -54,7 +54,7 @@
 				<configuration>
 					<url>http://localhost:8081/manager</url>
 					<server>TomcatServer</server>
-					<path>/</path>
+					<path>ROOT<path>
 				</configuration>
 			</plugin>
 		</plugins>
