@@ -53,11 +53,11 @@
 				<version>2.2</version>
 				<configuration>
 					<url>http://localhost:8081/manager/text</url>
-					<!--<server>TomcatServer</server> -->
+					<server>TomcatServer</server>
 					<update>true</update>
 					<path>/ROOT</path>
-					<username>jenkins2</username>
-					<password>e6rem3wm</password>
+<!-- 					<username>jenkins2</username> -->
+<!-- 					<password>e6rem3wm</password> -->
 				</configuration>
 			</plugin>
 		</plugins> 
