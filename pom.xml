@@ -56,12 +56,9 @@
 					<server>TomcatServer</server>
 					<update>true</update>
 					<path>/ROOT</path>
-<!-- 					<username>jenkins2</username> -->
-<!-- 					<password>e6rem3wm</password> -->
 				</configuration>
 			</plugin>
 		</plugins> 
-<!-- 		<finalName>ROOT</finalName> -->
 	</build>
 
 </project>
