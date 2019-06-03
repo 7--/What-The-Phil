@@ -55,7 +55,7 @@
 					<url>http://localhost:8081/manager/text</url>
 					<!--<server>TomcatServer</server> -->
 					<update>true</update>
-					<path>/</path>
+					<path>/ROOT</path>
 					<username>jenkins2</username>
 					<password>e6rem3wm</password>
 				</configuration>
