@@ -17,7 +17,6 @@ public class GreetingController implements Runnable {
 		System.out.println("2");
 		t.run();
 		System.out.println("3");
-
 		return "greeting";//ok
 	}
 
