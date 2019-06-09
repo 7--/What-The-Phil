@@ -16,20 +16,22 @@
 		<div id="main">
 			<h1>Crypto Analysis</h1>
 			<a target="_blank" href="https://coinmarketcap.com"> <img
-				id="mainImage" src="favicon.ico" /></a>
+				id="coin" src="favicon.ico" /></a>
 		</div>
-
-
-
+		
 		<div id="bitcoin">
 			<h2>Bitcoin Analysis</h2>
-		
+
 			<h2>
 				<a target="_blank" href="https://www.bitmex.com/app/fundingHistory">Bitmex
 					Funding Rates</a>
 			</h2>
+			<figure>
+			<img src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Latest Crypto Fear & Greed Index" />
+			</figure>
 
 		</div>
+		
 		<div id="altcoin">
 			<h2>Altcoin analysis</h2>
 			<h3>
@@ -37,10 +39,9 @@
 					href="https://www.turtlebc.com/tools/bull_percentage/btc">Altcoin
 					Bull Market Percentage</a>
 			</h3>
-
 			<h3>
-				<a target="_blank"  href="https://coinlend.org">Spot
-					Lending Rates</a>
+				<a target="_blank" href="https://coinlend.org">Spot Lending
+					Rates</a>
 			</h3>
 			<figure id="coinlend">
 				<div class='div_iframe'>
@@ -48,9 +49,6 @@
 				</div>
 			</figure>
 		</div>
-
-
-
 
 
 		<div id="bottom">
@@ -68,7 +66,10 @@
 
 <script>
 var mainImage = document.getElementById('mainImage')
+var coin = document.getElementById('coin')
+
 setInterval(() => {
 	mainImage.style.transform += "rotate(10deg)";
+	coin.style.transform += "rotate(10deg)";
 }, 100);   
 </script>
