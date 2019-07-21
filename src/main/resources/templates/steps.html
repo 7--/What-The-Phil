@@ -1,0 +1,53 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" th:href="@{global.css}" />
+<link rel="stylesheet" th:href="@{coin-lend.css}" />
+
+<title>What The Phil</title>
+</head>
+
+<title>What The Phil</title>
+</head>
+<body class="Site">
+	<h1 class="header_logo">
+		<a href="http://whatthephil.com"><img id="mainImage"
+			src="whatthephil-logo.png" /></a>
+	</h1>
+	<div class="Site-content">
+
+		<div id="main">
+
+
+			<ul id="nav">
+				<li><a href="/">Crypto Analysis</a></li>
+				<li><a href="/steps">Getting Started</a></li>
+				<li><a href="/arthur">End</a></li>
+				<li><a  target="_blank"  href="https://t.co/IcIWzqP5XK">Discord</a></li>
+			</ul>
+		</div>
+
+		<div id="steps">
+			<h2>1. Connect bank account and deposit USD to Coinbase Pro and
+				buy BTC</h2>
+			<a href="https://pro.coinbase.com/trade/ETH-USD"><img
+				src="coinbase_pro.png" /></a>
+			<h2>2. Send it all here</h2>
+			<a href="https://bitmex.com"> <img src="bitmex.png" /></a>
+			<h3>3. Report losses</h3>
+			<a href="https://cointracking.info?ref=P703070"> <img
+				src="CoinTracking_exchanges_300.png" />
+			</a>
+		</div>
+
+	</div>
+
+	<footer>What The Phil™ 2003-2019</footer>
+</body>
+</html>
+
+<script>
+var coin = document.getElementById('coin')
+
+setInterval(() => {
+	coin.style.transform += "rotate(10deg)";
+}, 100);   
