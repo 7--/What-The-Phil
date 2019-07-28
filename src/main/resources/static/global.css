@@ -26,7 +26,7 @@
 	float: left;
 }
 
-#bottom img:hover, h1:hover {
+#bottom img:hover {
 	transform: scale(1.3);
 }
 
