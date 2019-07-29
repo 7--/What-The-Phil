@@ -2,7 +2,6 @@
 <head>
 <link rel="stylesheet" th:href="@{global.css}" />
 <link rel="stylesheet" th:href="@{coin-lend.css}" />
-
 <title>What The Phil</title>
 </head>
 
@@ -36,13 +35,7 @@
 
 	</div>
 
-	<footer>What The Phil™ 2003-2019</footer>
+	<div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>
 
-<script>
-var coin = document.getElementById('coin')
-
-setInterval(() => {
-	coin.style.transform += "rotate(10deg)";
-}, 100);   

@@ -1,9 +1,7 @@
-<html  xmlns="http://www.w3.org/1999/xhtml" 
-    xmlns:th="http://www.thymeleaf.org" >
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" th:href="@{global.css}" />
 <link rel="stylesheet" th:href="@{coin-lend.css}" />
-
 <title>What The Phil</title>
 </head>
 
@@ -15,7 +13,7 @@
 	<div class="Site-content">
 
 		<div id="main">
-			    <div th:replace="fragments/menu :: menu"></div>
+			<div th:replace="fragments/menu :: menu"></div>
 		</div>
 
 
@@ -69,14 +67,6 @@
 
 	</div>
 
-	<footer>What The Phil™ 2003-2019</footer>
+	<div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>
-
-<script>
-var coin = document.getElementById('coin')
-
-setInterval(() => {
-	coin.style.transform += "rotate(10deg)";
-}, 100);   
-</script>
