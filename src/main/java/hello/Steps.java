@@ -1,9 +1,8 @@
 package hello;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class Steps implements Runnable {
@@ -17,6 +16,19 @@ public class Steps implements Runnable {
 	@GetMapping("/arthur")
 	public String arthur() {
 		return "arthur";
+		
+	}
+	
+	@GetMapping("/twitter")
+	public String twitter() {
+		return "twitter";
+		
+	}
+	
+	@GetMapping("/heythere/*")
+	@ResponseBody
+	public String arthurall() {
+		return "oh noo";
 		
 	}
 
