@@ -32,6 +32,13 @@ public class Steps implements Runnable {
 		
 	}
 
+	@GetMapping("discordlinux")
+	@ResponseBody
+	public String discordlinux() {
+		return "hey wtf man";
+		
+	}
+	
 	@Override
 	public void run() {
 		System.out.println("1");// 2113
