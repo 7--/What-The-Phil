@@ -10,20 +10,19 @@
 		<a href="http://whatthephil.com"><img id="mainImage"
 			src="whatthephil_ninja.png" /></a>
 	</h1>
-	<div class="Site-content">
+	<div th:replace="fragments/menu :: menu"></div>
 
-		<div id="main">
-			<div th:replace="fragments/menu :: menu"></div>
-		</div>
+	<div class="Site-content">
+		<div id="steps">
 			<h2>1. Coinbase, Gemini - Buy with USD</h2>
-			<a href="https://pro.coinbase.com/trade/ETH-USD"><img
-				src="coinbase_pro.png" /></a> <a href="https://gemini.com/"><img
-				src="gemini.svg" /></a>
+			<a href="https://pro.coinbase.com/trade/ETH-USD" style="zoom: 50%"><img
+				src="coinbase_pro.png" /></a> <a href="https://gemini.com/"
+				style="zoom: 50%"><img src="gemini-dark-logo-768x432.png" /></a>
 
 			<h2>2. Bitfinex, Binance - Popular Exchanges</h2>
 			<a href="https://pro.coinbase.com/trade/ETH-USD"><img
-				src="coinbase_pro.png" /></a> <a href="https://gemini.com/"><img
-				src="gemini.svg" /></a>
+				src="coinbase_pro.png" style="zoom: 50%" /></a> <a
+				href="https://gemini.com/"><img src="gemini.svg" /></a>
 
 			<h2>3. Bitmex - Most liquid exchange. Mainly derivatives.</h2>
 			<a href="https://bitmex.com"> <img src="bitmex.png" /></a>
@@ -32,7 +31,7 @@
 			<a href="https://ddex.io/referral?referralCode=FAU3"> <img
 				src="ddex_black.png" />
 			</a>
-
+		</div>
 	</div>
 
 	<div th:replace="fragments/footer :: footer"></div>
