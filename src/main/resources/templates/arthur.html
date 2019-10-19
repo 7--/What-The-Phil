@@ -4,21 +4,13 @@
 <link rel="stylesheet" th:href="@{coin-lend.css}" />
 <title>What The Phil</title>
 </head>
-
-<title>What The Phil</title>
-</head>
 <body class="Site">
 	<h1 class="header_logo">
 		<a href="http://whatthephil.com"><img id="mainImage"
 			src="whatthephil_logo_up.png" /></a>
 	</h1>
-	<div class="Site-content">
+	<div th:replace="fragments/menu :: menu"></div>
 
-		<div id="main">
-
-
-			<div th:replace="fragments/menu :: menu"></div>
-		</div>
 
 		<div id="steps">
 			<center>
