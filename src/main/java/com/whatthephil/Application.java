@@ -1,4 +1,4 @@
-package hello;
+package com.whatthephil;
 
 import java.security.Security;
 
