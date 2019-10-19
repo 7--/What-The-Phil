@@ -52,7 +52,7 @@
 				<a href="https://twitter.com/brian_armstrong"><img src="twitter/brianarmstrong.jpg"></a>			
 						
 			
-			<div style="visibility:hidden">
+			<div id="ogs" style="visibility:hidden">
 				<h3>Crypto OGs</h3>
 					<a href="https://twitter.com/AngeloBTC"><img src="twitter/angelo.jpg"></a>
 					<a href="https://twitter.com/CryptoCobain"><img src="twitter/cobie.jpg"></a>
@@ -61,12 +61,18 @@
 					<a href="https://twitter.com/CryptOrca"><img src="twitter/orca.jpg"></a> 
 					<a href="https://twitter.com/RNR_0"><img src="twitter/romano.jpg"></a> 
 			</div>
-			
 		</div>
-
 	</div>
-
 	<div th:replace="fragments/footer :: footer"></div>
 </body>
 </html>
-
+<script>
+var ogs = document.getElementById('ogs');
+setInterval(() => {
+	ogs.style.visibility = "initial";
+	setTimeout(() => {
+		ogs.style.visibility = "hidden"
+	}, 1000);
+	;
+}, 600000);   
+</script>
