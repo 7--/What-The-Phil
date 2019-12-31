@@ -7,21 +7,17 @@
 
 <body class="Site">
 	<div class="header_logo">
-		<a href="http://whatthephil.com"><img id="mainImage"
-			src="whatthephil_herbert.png" /></a>
+		<a href="http://whatthephil.com">
+			<img id="mainImage" src="whatthephil_herbert.png" />
+		</a>
 		<div id="main"></div>
 	</div>
 	<div th:replace="fragments/menu :: menu"></div>
-	
+
 	<div class="Site-content">
 
 
-
-
-
-
-
-
+		<div th:replace="fragments/charts/total :: total" ></div>
 
 
 		<div id="bitcoin">
@@ -32,14 +28,16 @@
 					Funding Rates</a>
 			</h2>
 			<figure>
-				<a target="_blank" href="https://coinmarketcap.com/charts"><img
-					src="coinmarketcap.png" alt="coinmarket" /></a>
+				<a target="_blank" href="https://coinmarketcap.com/charts">
+					<img src="coinmarketcap.png" alt="coinmarket" />
+				</a>
 			</figure>
 			<figure>
 				<a target="_blank"
-					href="https://alternative.me/crypto/fear-and-greed-index"><img
-					src="https://alternative.me/crypto/fear-and-greed-index.png"
-					alt="Latest Crypto Fear & Greed Index" /></a>
+					href="https://alternative.me/crypto/fear-and-greed-index">
+					<img src="https://alternative.me/crypto/fear-and-greed-index.png"
+						alt="Latest Crypto Fear & Greed Index" />
+				</a>
 			</figure>
 
 		</div>
@@ -60,16 +58,19 @@
 			</figure>
 			<figure id="coinlend">
 				<h3>DDEX Decentrelized Exchange</h3>
-				<a href="https://ddex.io/trade/WETH-DAI"> <img
-					src="eth_icon.webp" /></a>
+				<a href="https://ddex.io/trade/WETH-DAI">
+					<img src="eth_icon.webp" />
+				</a>
 			</figure>
 		</div>
 
 
 		<div id="bottom">
-			<a href="https://www.bitmex.com/register/EK7jNQ"> <img src="bitmex.png" /></a> <a
-				target="_blank" href="https://cointracking.info?ref=P703070"> <img
-				src="CoinTracking_exchanges_300.png" />
+			<a href="https://www.bitmex.com/register/EK7jNQ">
+				<img src="bitmex.png" />
+			</a>
+			<a target="_blank" href="https://cointracking.info?ref=P703070">
+				<img src="CoinTracking_exchanges_300.png" />
 			</a>
 		</div>
 
