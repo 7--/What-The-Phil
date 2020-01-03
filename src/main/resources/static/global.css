@@ -19,6 +19,12 @@
 	bottom: 0;
 }
 
+#total {
+	width: auto;
+	height: 610;
+	display: block;
+}
+
 #altcoin {
 	float: right;
 }
