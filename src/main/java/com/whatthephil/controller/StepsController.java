@@ -13,9 +13,9 @@ public class StepsController implements Runnable {
 		
 	}
 
-	@GetMapping("/arthur")
+	@GetMapping("/learn")
 	public String arthur() {
-		return "arthur";
+		return "learn";
 		
 	}
 	
