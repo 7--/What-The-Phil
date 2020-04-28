@@ -1,12 +1,34 @@
+
+
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
+
 <body>
+
 	<footer th:fragment="footer">
+		<script src="jquery.min.js"></script>
+		<script src="jquery.plugin.js"></script>
+		<script src="jquery.countdown.js"></script>
+		<script>
+			$(function() {
+				var austDay = new Date();
+				austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+				$('#defaultCountdown').countdown({
+					until : austDay
+				});
+				$('#year').text(austDay.getFullYear());
+			});
+		</script>
+
+
 		<p>
-			What The Phil™ 2020</br>
-			Financial freedom belongs to all of us.
+			What The Phil™ 2020</br> Financial freedom belongs to all of us.
 		</p>
-		
+
+		<span id="year">2014</span>.
+		</p>
+		<div id="defaultCountdown"></div>
+
 	</footer>
 </body>
 </html>
