@@ -14,21 +14,39 @@
 				var austDay = new Date();
 				austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
 				$('#defaultCountdown').countdown({
-					until : austDay
+					until : austDay,
+					timezone: 0,
+					layout: '<b>Daily Close:</b>   {hn} {hl} {mn} {ml} {sn} {sl}'
 				});
-				$('#year').text(austDay.getFullYear());
+				/* $('#year').text(austDay.getFullYear()); */
+			});
+		</script>
+		<script>
+			function getNextSunday(d) {
+				  d = new Date(d);
+				  var day = d.getDay(),
+				      diff = d.getDate() - day + 7; 
+				  var sun = new Date(d.setDate(diff));
+				  sun.setHours(0); sun.setMinutes(0); sun.setSeconds(0);
+				  return sun;
+				}
+			$(function() {
+				var weekly = getNextSunday(new Date());
+				$('#weeklyCountdown').countdown({
+					until : weekly,
+					timezone: 0,
+					layout: '<b>Weekly Close:</b>  {dn} {dl} {hn} {hl} '
+				});
 			});
 		</script>
 
 
-		<p>
-			What The Phil™ 2020</br> Financial freedom belongs to all of us.
-		</p>
+		<span>
+			What The Phil™ 2020<br> Financial freedom belongs to all of us.
+		</span>
 
-		<span id="year">2014</span>.
-		</p>
 		<div id="defaultCountdown"></div>
-
+		<div id="weeklyCountdown"></div>
 	</footer>
 </body>
 </html>
