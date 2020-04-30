@@ -1,5 +1,3 @@
-
-
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 
@@ -9,6 +7,7 @@
 		<script src="jquery.min.js"></script>
 		<script src="jquery.plugin.js"></script>
 		<script src="jquery.countdown.js"></script>
+		<!-- Daily -->
 		<script>
 			$(function() {
 				var austDay = new Date();
@@ -21,6 +20,7 @@
 				/* $('#year').text(austDay.getFullYear()); */
 			});
 		</script>
+		<!-- Weekly -->
 		<script>
 			function getNextSunday(d) {
 				  d = new Date(d);
@@ -39,6 +39,18 @@
 				});
 			});
 		</script>
+		<!-- Monthly -->
+		<script>
+			var date = new Date();
+			var monthly = new Date(date.getFullYear(), date.getMonth()+1, 1);
+			$(function() {
+				$('#monthlyCountdown').countdown({
+					until : monthly,
+					timezone: 0,
+					layout: '<b>Monthly Close:</b>  {dn} {dl} {hn} {hl} '
+				});
+			});
+		</script>
 
 
 		<span>
@@ -47,6 +59,7 @@
 
 		<div id="defaultCountdown"></div>
 		<div id="weeklyCountdown"></div>
+		<div id="monthlyCountdown"></div>
 	</footer>
 </body>
 </html>
