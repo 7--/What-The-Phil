@@ -32,14 +32,13 @@
 
 #altcoin {
 	display: block;
-	float: right;
-	width: 50%;
+	float: left;
 }
 
 #bitcoin {
 	display: block;
 	float: left;
-	width: 50%;
+	width: 40%;
 }
 
 #bottom img:hover {
