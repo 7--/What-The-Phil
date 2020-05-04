@@ -2,25 +2,29 @@
 	width: 100%;
 	text-align: center;
 }
-
 .Site {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
 }
-
 .Site-content {
 	flex: 1;
 	margin-left: 200;
 	margin-right: 200px;
 }
-
+h1 {
+	background-color: lightgreen;
+	text-decoration: none;
+}
+h1 a {
+	text-decoration: none;
+}
 .center {
 	width: 50%;
 	margin: 0 auto;
  }
- 
-#bottom {
+
+#bottom { 
 	bottom: 0;
 }
 
@@ -34,22 +38,19 @@
 	display: block;
 	float: left;
 }
-
 #bitcoin {
 	display: block;
 	float: left;
-	width: 40%;
+	/* width: 40%; */
+	margin-right: 5%;
 }
-
 #bottom img:hover {
 	transform: scale(1.3);
 }
-
 .hover:hover {
 	transform: scale(1.5);
  	transition: transform 1s;
 }
-
 #menu {
 	width: 100%;
 	text-align: center;
@@ -57,7 +58,6 @@
 	color: orange;
 	font-family: cursive, "Trebuchet MS", Verdana, sans-serif;
 }
-
 footer {
 	padding: 10px;
 	font-size: 24px;
@@ -65,17 +65,14 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 #bitmex {
 	float: left;
 }
-
 #nav {
 	list-style: none;
 	padding-left: 0;
 	text-align: center;
 }
-
 #nav li {
 	padding: 8px 15px; margin : 0; font-weight : bold;
 	border-right: 1px solid #ccc;
@@ -83,22 +80,18 @@ footer {
 	font-weight: bold;
 	margin: 0;
 }
-
 #nav li:last-child {
 	border-right: 0px;
 }
-
 #nav li a {
 	color: #190;
 	text-decoration: none;
 }
-
 #nav li a:hover {
 	color: #c00;
 	background-color: #fff;
 }
-
 a {
 	color: black;
-	text-decoration: none;
+	
 }
