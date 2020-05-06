@@ -13,75 +13,77 @@
 	<div class="Site-content">
 
 		<div th:replace="fragments/charts/total :: total"></div>
-
-		<div id="bitcoin">
-			<h1><a href="https://www.investopedia.com/terms/m/marketcapitalization.asp">Market Cap</a></h1>
-			<figure>
-				<a href="https://coinmarketcap.com/charts">
-					<img src="cmc.png" alt="coin market cap" />
-				</a>
-			</figure>
-			<figure>
-				<a href="https://coinmarketcap.com/charts">
-					<img src="coingecko.png"  alt="coin gecko" />
-				</a>
-			</figure>
-			<h1>Charting</h1>
-			<figure>
-				<a href="https://www.tradingview.com/gopro/?share_your_love=philrego">
-					<img src="tradingview-logo.png"  alt="trading view" />
-				</a>
-			</figure>
-			<figure>
-				<a href="https://www.coinigy.com/?r=5f1b2acb">
-					<img src="coinigy-logo.png" alt="coinigy" />
-				</a>
-			</figure>
-			<h1><a href="https://www.investopedia.com/terms/o/order-book.asp">Order Book </a>Charting</h1>
-			<figure>
-				<a href="https://coinmarketcap.com/charts">
-					<img src="tradinglite-logo.png" alt="trading lite" />
-				</a>
-			</figure>
-			<figure>
-				<a href="https://coinmarketcap.com/charts">
-					<img src="bookmap-logo.png" alt="book map" />
-				</a>
-			</figure>
-
-		</div>
-
-		<div id="altcoin">
-					
-			<h1>Sentiment</h1>
-			<figure>
-				<a href="https://alternative.me/crypto/fear-and-greed-index">
-					<img src="https://alternative.me/crypto/fear-and-greed-index.png" 
-						width="400px" alt="Latest Crypto Fear & Greed Index" />
-				</a>
-			</figure>
-			<h2>
-				<a href="https://studio.glassnode.com/">Address analysis</a>
-			</h2>
-			
-			<h2>
-				<a href="https://www.turtlebc.com/tools/bull_percentage/btc">Altcoin
-					Bull Market Percentage</a>
-			</h2>
-			
-			<h1>Funding Rates</h1>
-			
-			<figure id="coinlend">
-				<a href="https://coinlend.org">
-					<div class='div_iframe'>
-						<iframe class='frame' scrolling="no" src='https://coinlend.org'></iframe>
-					</div>
-				</a>
-			</figure>
-			<h2>
-				<a href="https://www.bitmex.com/app/fundingHistory">Bitmex
-					Funding Rates</a>
-			</h2>
+		
+		<div class="flex-container space-around">
+			<div id="flex-item">
+				<h1><a href="https://www.investopedia.com/terms/m/marketcapitalization.asp">Market Cap</a></h1>
+				<figure>
+					<a href="https://coinmarketcap.com/charts">
+						<img src="cmc.png" alt="coin market cap" />
+					</a>
+				</figure>
+				<figure>
+					<a href="https://coinmarketcap.com/charts">
+						<img src="coingecko.png"  alt="coin gecko" />
+					</a>
+				</figure>
+				<h1>Charting</h1>
+				<figure>
+					<a href="https://www.tradingview.com/gopro/?share_your_love=philrego">
+						<img src="tradingview-logo.png"  alt="trading view" />
+					</a>
+				</figure>
+				<figure>
+					<a href="https://www.coinigy.com/?r=5f1b2acb">
+						<img src="coinigy-logo.png" alt="coinigy" />
+					</a>
+				</figure>
+				<h1><a href="https://www.investopedia.com/terms/o/order-book.asp">Order Book </a>Charting</h1>
+				<figure>
+					<a href="https://coinmarketcap.com/charts">
+						<img src="tradinglite-logo.png" alt="trading lite" />
+					</a>
+				</figure>
+				<figure>
+					<a href="https://coinmarketcap.com/charts">
+						<img src="bookmap-logo.png" alt="book map" />
+					</a>
+				</figure>
+	
+			</div>
+	
+			<div id="flex-item">
+						
+				<h1>Sentiment</h1>
+				<figure>
+					<a href="https://alternative.me/crypto/fear-and-greed-index">
+						<img src="https://alternative.me/crypto/fear-and-greed-index.png" 
+							width="400px" alt="Latest Crypto Fear & Greed Index" />
+					</a>
+				</figure>
+				<h2>
+					<a href="https://studio.glassnode.com/">Address analysis</a>
+				</h2>
+				
+				<h2>
+					<a href="https://www.turtlebc.com/tools/bull_percentage/btc">Altcoin
+						Bull Market Percentage</a>
+				</h2>
+				
+				<h1>Funding Rates</h1>
+				
+				<figure id="coinlend">
+					<a href="https://coinlend.org">
+						<div class='div_iframe'>
+							<iframe class='frame' scrolling="no" src='https://coinlend.org'></iframe>
+						</div>
+					</a>
+				</figure>
+				<h2>
+					<a href="https://www.bitmex.com/app/fundingHistory">Bitmex
+						Funding Rates</a>
+				</h2>
+			</div>
 		</div>
 	</div>
 
