@@ -1,11 +1,12 @@
 package com.whatthephil.controller;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
+
+import com.whatthephil.dto.BitmexFunding;
 
 @Controller
 public class GreetingController {
@@ -20,6 +21,9 @@ public class GreetingController {
 	
 	@GetMapping("/")
 	public String greeting() {
+		
+		fundingCall();
+		
 		return "greeting";
 	}
 
@@ -32,6 +36,12 @@ public class GreetingController {
 		System.out.println(response);
 		
 		return "jstest";
+	}
+	
+	public void fundingCall() {
+		RestTemplate restTemplate = new RestTemplate();
+		String url = "https://www.bitmex.com/api/v1/funding?symbol=&count=500&reverse=true";
+		BitmexFunding[] bitmexFunding = restTemplate.getForObject(url, BitmexFunding[].class);
 	}
 
 }
