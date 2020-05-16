@@ -19,7 +19,6 @@ public class BitmexFundingLogic {
 		return restTemplate.getForObject(url, BitmexFunding[].class);
 	}
 
-	
 	private void calculateAverages(BitmexFunding[] bitmexFundingAll) {
 		AvgFundingRates avgFundingRates = new AvgFundingRates();
 		int dailyXrpCount = 3;
@@ -49,7 +48,6 @@ public class BitmexFundingLogic {
 		avgFundingRates.setXrpWeeklyAvg((weeklyXrp * 100) / 21);
 		BitmexFundingLogic.avgFundingRates = avgFundingRates;
 	}
-
 
 	public AvgFundingRates getAvgFundingRates() {
 		if(avgFundingRates == null) {

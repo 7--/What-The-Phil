@@ -71,6 +71,8 @@
 				</h2>
 				
 				<h1>Funding Rates</h1>
+				<div th:replace="fragments/tables/bitmexfunding :: bitmexfunding"></div>
+				
 				<p th:text="'XRP 24 hour avg rate: ' + ${avgFundingRates.xrpOneDayAvg}" />
 				<p th:text="'XRP 3 day avg rate: ' + ${avgFundingRates.xrpThreeDayAvg}" />
 				<p th:text="'XRP weekly avg rate: ' + ${avgFundingRates.xrpWeeklyAvg}" />

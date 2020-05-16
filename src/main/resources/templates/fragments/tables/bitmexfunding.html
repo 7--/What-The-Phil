@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<body>
+	<table th:fragment="bitmexfunding">
+		<thead>
+			<tr>
+				<th colspan="2">Bitmex Funding Average Rates</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Currency</td>
+				<td>1 Day</td>
+				<td>3 Day</td>
+				<td>1 Week</td>
+				<td>2 Week</td>
+				<td>1 Month</td>
+			</tr>
+			<tr>
+				<td>BTC</td>
+				<td>0.02</td>
+			</tr>
+			<tr>
+				<td>ETH</td>
+				<td>0.02</td>
+			</tr>
+			<tr>
+				<td>XRP</td>
+				<td th:text="${avgFundingRates.xrpOneDayAvgF}"></td>
+				<td th:text="${avgFundingRates.xrpThreeDayAvgF}"></td>
+				<td th:text="${avgFundingRates.xrpWeeklyAvgF}"></td>
+				
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
