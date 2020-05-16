@@ -1,5 +1,7 @@
 package com.whatthephil.http;
 
+import java.time.Instant;
+
 import org.springframework.web.client.RestTemplate;
 
 import com.whatthephil.dto.BitmexFunding;
@@ -7,7 +9,9 @@ import com.whatthephil.model.AvgFundingRates;
 
 public class BitmexFundingLogic {
 
-	private static  AvgFundingRates avgFundingRates;
+	private static AvgFundingRates avgFundingRates;
+	private static Instant lastCall;
+	private static final long eightHoursInSeconds = 28800L;
 	
 	private BitmexFunding[] fundingCall() {
 		RestTemplate restTemplate = new RestTemplate();
@@ -48,9 +52,17 @@ public class BitmexFundingLogic {
 
 
 	public AvgFundingRates getAvgFundingRates() {
-		//need time logic
-		
-		calculateAverages(fundingCall());
+		if(avgFundingRates == null) {
+			calculateAverages(fundingCall());
+			lastCall = Instant.now();
+		}
+		Instant now = Instant.now();
+		if(lastCall != null) {
+			if(lastCall.plusSeconds(eightHoursInSeconds).isBefore(now)) {
+				calculateAverages(fundingCall());
+				lastCall = Instant.now();
+			}
+		}
 		return avgFundingRates;
 	}
 }

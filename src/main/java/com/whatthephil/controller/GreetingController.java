@@ -21,12 +21,8 @@ public class GreetingController {
 	public String greeting(ModelMap model) {
 		BitmexFundingLogic bitmexFundingLogic = new BitmexFundingLogic();
 		AvgFundingRates avgFundingRates = bitmexFundingLogic.getAvgFundingRates();
-		//AvgFundingRates avgFundingRates = oneDayAvg(fundingCall());
 		model.addAttribute("avgFundingRates", avgFundingRates);
 		return "greeting";
 	}
-
-	
-
 	
 }
