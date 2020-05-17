@@ -6,7 +6,10 @@ public class AvgFundingRates {
 	private double xrpOneDayAvg;
 	private double xrpThreeDayAvg;
 	private double xrpWeeklyAvg;
-    private DecimalFormat df = new DecimalFormat("#.####%");
+	private double xrpTwoWeeklyAvg;
+	private double xrpMonthlyAvg;
+
+    private DecimalFormat df = new DecimalFormat("#.####");
 
 
 	public double getXrpOneDayAvg() {
@@ -44,7 +47,29 @@ public class AvgFundingRates {
 	public void setXrpWeeklyAvg(double xrpWeeklyAvg) {
 		this.xrpWeeklyAvg = xrpWeeklyAvg;
 	}
+
+	public double getXrpTwoWeeklyAvg() {
+		return xrpTwoWeeklyAvg;
+	}
+
+	public String getXrpTwoWeeklyAvgF() {
+		return df.format(xrpTwoWeeklyAvg);
+	}
 	
+	public void setXrpTwoWeeklyAvg(double xrpTwoWeeklyAvg) {
+		this.xrpTwoWeeklyAvg = xrpTwoWeeklyAvg;
+	}
+
+	public double getXrpMonthlyAvg() {
+		return xrpMonthlyAvg;
+	}
 	
+	public String getXrpMonthlyAvgF() {
+		return df.format(xrpMonthlyAvg);
+	}
+
+	public void setXrpMonthlyAvg(double xrpMonthlyAvg) {
+		this.xrpMonthlyAvg = xrpMonthlyAvg;
+	}
 	
 }

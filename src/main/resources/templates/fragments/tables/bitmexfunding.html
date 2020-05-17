@@ -26,10 +26,11 @@
 			</tr>
 			<tr>
 				<td>XRP</td>
-				<td th:text="${avgFundingRates.xrpOneDayAvgF}"></td>
-				<td th:text="${avgFundingRates.xrpThreeDayAvgF}"></td>
-				<td th:text="${avgFundingRates.xrpWeeklyAvgF}"></td>
-				
+				<td th:text="${avgFundingRates.xrpOneDayAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.xrpThreeDayAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.xrpWeeklyAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.xrpTwoWeeklyAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.xrpMonthlyAvgF} + '%'"></td>
 			</tr>
 		</tbody>
 	</table>

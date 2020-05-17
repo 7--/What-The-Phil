@@ -27,25 +27,39 @@ public class BitmexFundingLogic {
 		double threeDayXrp = 0;
 		int weeklyXrpCount = 21;
 		double weeklyXrp = 0;
+		int twoWeeklyXrpCount = 42;
+		double twoWeeklyXrp = 0;
+		int monthlyXrpCount = 84;
+		double monthlyXrp = 0;
 		for (BitmexFunding bitmexFunding : bitmexFundingAll) {
 			if (bitmexFunding.getSymbol().equals("XRPUSD")) {
-				if (weeklyXrpCount > 0) {
-					if (threeDayXrpCount > 0) {
-						if (dailyXrpCount > 0) {
-							dailyXrp += bitmexFunding.getFundingRate();
-							dailyXrpCount--;
+				if (monthlyXrpCount > 0) {
+					if (twoWeeklyXrpCount > 0) {
+						if (weeklyXrpCount > 0) {
+							if (threeDayXrpCount > 0) {
+								if (dailyXrpCount > 0) {
+									dailyXrp += bitmexFunding.getFundingRate();
+									dailyXrpCount--;
+								}
+								threeDayXrp += bitmexFunding.getFundingRate();
+								threeDayXrpCount--;
+							}
+							weeklyXrp += bitmexFunding.getFundingRate();
+							weeklyXrpCount--;
 						}
-						threeDayXrp += bitmexFunding.getFundingRate();
-						threeDayXrpCount--;
+						twoWeeklyXrp += bitmexFunding.getFundingRate();
+						twoWeeklyXrpCount--;
 					}
-					weeklyXrp += bitmexFunding.getFundingRate();
-					weeklyXrpCount--;
-				}		
+					monthlyXrp += bitmexFunding.getFundingRate();
+					monthlyXrpCount--;
+				}
 			}
 		}
 		avgFundingRates.setXrpOneDayAvg((dailyXrp * 100) / 3);
 		avgFundingRates.setXrpThreeDayAvg((threeDayXrp * 100) / 9);
 		avgFundingRates.setXrpWeeklyAvg((weeklyXrp * 100) / 21);
+		avgFundingRates.setXrpTwoWeeklyAvg((twoWeeklyXrp * 100) / 42);
+		avgFundingRates.setXrpMonthlyAvg((monthlyXrp * 100) / 84);
 		BitmexFundingLogic.avgFundingRates = avgFundingRates;
 	}
 
