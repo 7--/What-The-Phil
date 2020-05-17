@@ -4,7 +4,7 @@
 	<table th:fragment="bitmexfunding">
 		<thead>
 			<tr>
-				<th colspan="2">Bitmex Funding Average Rates</th>
+				<th colspan="6">Bitmex Funding Average Rates</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -18,11 +18,19 @@
 			</tr>
 			<tr>
 				<td>BTC</td>
-				<td>0.02</td>
+				<td th:text="${avgFundingRates.btcOneDayAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.btcThreeDayAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.btcWeeklyAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.btcTwoWeeklyAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.btcMonthlyAvgF} + '%'"></td>
 			</tr>
 			<tr>
 				<td>ETH</td>
-				<td>0.02</td>
+				<td th:text="${avgFundingRates.ethOneDayAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.ethThreeDayAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.ethWeeklyAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.ethTwoWeeklyAvgF} + '%'"></td>
+				<td th:text="${avgFundingRates.ethMonthlyAvgF} + '%'"></td>
 			</tr>
 			<tr>
 				<td>XRP</td>
