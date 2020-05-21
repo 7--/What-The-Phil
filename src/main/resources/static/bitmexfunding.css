@@ -1,0 +1,21 @@
+thead {
+	background-color: lightsalmon;
+	text-align: center;
+}
+
+table tbody td {
+	background-color: lightgreen;
+	padding: 10px;
+}
+
+table {
+	background-color: lightsalmon;
+}
+
+thead th, tfoot th {
+	font-family: 'Rock Salt', cursive;
+}
+
+tfoot td {
+	text-align: center;
+}

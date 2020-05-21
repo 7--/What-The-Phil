@@ -2,12 +2,10 @@
 	xmlns:th="http://www.thymeleaf.org">
 <body>
 	<table th:fragment="bitmexfunding">
+		<caption>
+			<span>Bitmex Funding Average Rates</span>
+		</caption>
 		<thead>
-			<tr>
-				<th colspan="6">Bitmex Funding Average Rates</th>
-			</tr>
-		</thead>
-		<tbody>
 			<tr>
 				<td>Currency</td>
 				<td>1 Day</td>
@@ -16,6 +14,8 @@
 				<td>2 Week</td>
 				<td>1 Month</td>
 			</tr>
+		</thead>
+		<tbody>
 			<tr>
 				<td>BTC</td>
 				<td th:text="${avgFundingRates.btcOneDayAvgF} + '%'"></td>
@@ -41,6 +41,15 @@
 				<td th:text="${avgFundingRates.xrpMonthlyAvgF} + '%'"></td>
 			</tr>
 		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="3"><a href="https://www.bitmex.com/app/fundingHistory">Bitmex
+						Funding Rates</a></td>
+				<td colspan="3"><a
+						href="https://www.bitmex.com/app/perpetualContractsGuide#Funding">How
+						does it work?</a></td>
+			</tr>
+		</tfoot>
 	</table>
 </body>
 </html>
