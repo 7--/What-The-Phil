@@ -1,8 +1,8 @@
 .div_iframe {
 	overflow: hidden;
-	height: 350px;
+	height: 450px;
 	width: 500px;
-	pointer-events:none;
+	/* pointer-events:none; */
 }
 
 
