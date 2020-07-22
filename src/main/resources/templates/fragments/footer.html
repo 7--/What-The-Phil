@@ -4,63 +4,59 @@
 <body>
 
 	<footer th:fragment="footer">
-		<script src="jquery.min.js"></script>
-		<script src="jquery.plugin.js"></script>
-		<script src="jquery.countdown.js"></script>
-		<!-- Daily -->
-		<script>
-			$(function() {
-				var austDay = new Date();
-				austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
-				$('#defaultCountdown').countdown({
-					until : austDay,
-					timezone: 0,
-					layout: '<b>Daily Close:</b>   {hn} {hl} {mn} {ml} {sn} {sl}'
-				});
-				/* $('#year').text(austDay.getFullYear()); */
-			});
-		</script>
-		<!-- Weekly -->
-		<script>
-			function getNextSunday(d) {
-				  d = new Date(d);
-				  var day = d.getDay(),
-				      diff = d.getDate() - day + 7; 
-				  var sun = new Date(d.setDate(diff));
-				  sun.setHours(0); sun.setMinutes(0); sun.setSeconds(0);
-				  return sun;
-				}
-			$(function() {
-				var weekly = getNextSunday(new Date());
-				$('#weeklyCountdown').countdown({
-					until : weekly,
-					timezone: 0,
-					layout: '<b>Weekly Close:</b>  {dn} {dl} {hn} {hl} '
-				});
-			});
-		</script>
-		<!-- Monthly -->
-		<script>
-			var date = new Date();
-			var monthly = new Date(date.getFullYear(), date.getMonth()+1, 1);
-			$(function() {
-				$('#monthlyCountdown').countdown({
-					until : monthly,
-					timezone: 0,
-					layout: '<b>Monthly Close:</b>  {dn} {dl} {hn} {hl} '
-				});
-			});
-		</script>
-
+		
 
 		<span>
-			What The Phil™ 2020 <a href="https://twitter.com/philrego">Feedback?</a>
+			What The Phil™ 2020 <a href="https://twitter.com/messages/compose?recipient_id=1396293804&text=Hello%20whatthephil.com%20would%20be%20better%20if%20">Feedback?</a>
 			<br/> <i>Financial freedom belongs to all of us.</i>
 		</span>
-
-		<div id="defaultCountdown"></div>
-		<div id="weeklyCountdown"></div>
-		<div id="monthlyCountdown"></div>
+		<div><b>Daily Close:</b> <span id="daily"></span> </div>
+    	<div><b>Weekly Close:</b> <span id="weekly"></span> </div>
+    	<div><b>Monthly Close:</b> <span id="monthly"></span> </div>
+    	
+    	
+    	
+    	
+    	<script src="moment.js"></script>
+		<script src="countdowntimer.js"></script>
+		<script>
+			var dailyCloseSeconds = moment.utc().endOf("day").diff(moment.utc(), 'seconds');
+			var weeklyCloseSeconds = moment.utc().endOf("week").diff(moment.utc(), 'seconds');
+			var monthlyCloseSeconds = moment.utc().endOf("month").diff(moment.utc(), 'seconds');
+		
+			//Countodnw to daily close.
+			var dailyDisplay = document.querySelector('#daily'),
+			  dailyTimer = new CountDownTimer(dailyCloseSeconds);
+			dailyTimer.onTick(dailyFormat).start();
+		
+			function dailyFormat(days, hours, minutes, seconds) {
+			  minutes = minutes < 10 ? "0" + minutes : minutes;
+			  seconds = seconds < 10 ? "0" + seconds : seconds;
+			  dailyDisplay.textContent = hours + 'H ' + minutes + 'm ' + seconds + 's';
+			}
+		
+			//Countodnw to weekly close.
+			var weeklyDisplay = document.querySelector('#weekly'),
+			  weeklyTimer = new CountDownTimer(weeklyCloseSeconds);
+			weeklyTimer.onTick(weeklyFormat).start();
+		
+			function weeklyFormat(days, hours, minutes, seconds) {
+			  minutes = minutes < 10 ? "0" + minutes : minutes;
+			  seconds = seconds < 10 ? "0" + seconds : seconds;
+			  weeklyDisplay.textContent = days + 'D ' + hours + 'H ' + minutes + 'm ';
+			}
+		
+			//Countodnw to monthly close.
+			var monthlyDisplay = document.querySelector('#monthly'),
+			  monthlyTimer = new CountDownTimer(monthlyCloseSeconds);
+			monthlyTimer.onTick(monthlyFormat).start();
+		
+			function monthlyFormat(days, hours, minutes, seconds) {
+			  minutes = minutes < 10 ? "0" + minutes : minutes;
+			  seconds = seconds < 10 ? "0" + seconds : seconds;
+			  monthlyDisplay.textContent = days + 'D ' + hours + 'H ' + minutes + 'm ';
+			}
+		</script>
 	</footer>
 </body>
 </html>
