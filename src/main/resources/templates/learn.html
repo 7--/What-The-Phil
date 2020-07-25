@@ -3,14 +3,20 @@
 <link rel="stylesheet" th:href="@{global.css}" />
 <base target="_blank">
 <title>What The Phil</title>
+<style>
+h2 {
+	background-color: lightgreen;
+}
+img, iframe {
+	display: block;
+	margin: auto;
+}
+</style>
 </head>
 <body class="Site">
 	<div th:replace="fragments/header :: header"></div>
 
 	<div class="Site-content">
-		<div class="center">
-			<div id="steps">
-			
 				<figure>
 					<h2>
 					This easy to read guide covers all the basics. It's based on Forex but applicable to all markets. 
@@ -35,8 +41,12 @@
 					</h2>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/1ffxSdX48VI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</figure>
-			</div>
-		</div>
+				<figure>
+					<h2>
+					ICT also has many educational videos and developed many trading techniques. Checkout all his videos <a href="https://www.youtube.com/c/InnerCircleTrader/videos"> here.
+					</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/uE-aaP16nOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</figure>
 	</div>
 
 	<div th:replace="fragments/footer :: footer"></div>

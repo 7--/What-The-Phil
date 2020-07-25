@@ -1,5 +1,4 @@
 .header_logo {
-	width: 100%;
 	text-align: center;
 }
 .Site {
@@ -34,16 +33,6 @@ h1 a {
 	display: block;
 }
 
-/* #altcoin {
-	display: block;
-	float: left;
-}
-#bitcoin {
-	display: block;
-	float: left;
-	width: 40%;
-	margin-right: 5%;
-} */
 #bottom img:hover {
 	transform: scale(1.3);
 }
@@ -64,6 +53,8 @@ footer {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	background-color:lightgreen;
+	width: 99%;
 }
 #bitmex {
 	float: left;

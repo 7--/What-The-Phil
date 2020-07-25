@@ -1,9 +1,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" th:href="@{global.css}" />
-<link rel="stylesheet" th:href="@{coin-lend.css}" />
 <base target="_blank">
 <title>What The Phil</title>
+<style>
+.timeline-Widget {
+	margin: 0 auto;
+}
+</style>
 </head>
 <body class="Site">
 
@@ -25,9 +29,9 @@
 				<a href="https://twitter.com/CryptoDonAlt"><img src="/twitter/donalt.png"></a>
 				<a href="https://twitter.com/22loops"><img src="/twitter/loops.jpg"></a>
 				<a href="https://twitter.com/CryptoZyzz"><img src="/twitter/zyzz.jpg"></a>
-				<a href="https://twitter.com/J0E007 "><img src="/twitter/joe.jpg"></a>		
-				<a href="https://twitter.com/IncomeSharks "><img src="/twitter/shark.png"></a>
-				
+				<a href="https://twitter.com/J0E007"><img src="/twitter/joe.jpg"></a>		
+				<a href="https://twitter.com/IncomeSharks"><img src="/twitter/shark.png"></a>
+				<a href="https://twitter.com/CryptoKaleo"><img src="/twitter/kaleo.jpg"></a>
 							
 				
 			<h1>Entertainment/Education</h1>
@@ -61,10 +65,9 @@
 				<a href="https://twitter.com/rogerkver"><img src="twitter/rogerver.jpg"></a>
 				<a href="https://twitter.com/SatoshiLite"><img src="twitter/charlielee.jpg"></a>	
 					
-				
 									
 			<br><br><br>
-			<a class="twitter-timeline" data-lang="en" href="https://twitter.com/philrego/lists/crypto-twitter?ref_src=twsrc%5Etfw">A Twitter List by philrego</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<a class="twitter-timeline" data-lang="en" href="https://twitter.com/philrego/lists/crypto-twitter?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			
 			
 			<div id="ogs" style="visibility:hidden">
@@ -82,6 +85,11 @@
 </body>
 </html>
 <script>
+//Center twitter list dynamically
+var twitterList = document.querySelector('.timeline-Widget');
+twitterList.style.margin = "0 auto";
+
+//Hidden OGs
 var ogs = document.getElementById('ogs');
 setInterval(() => {
 	ogs.style.visibility = "initial";
@@ -89,5 +97,7 @@ setInterval(() => {
 		ogs.style.visibility = "hidden"
 	}, 1000);
 	;
-}, 100000);   
+}, 100000);  
+
+
 </script>
